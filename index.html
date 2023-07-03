@@ -9,13 +9,20 @@
     <title>Library</title>
 </head>
 <body>
+    <h1>Your Library</h1>
+    <h3>Made by mohammadzfr</h3>
     <table class="library">
-        <tr>
-          <th>Title</th>
-          <th>Author</th>
-          <th>Page Count</th>
-          <th>Is Read</th>
-        </tr>
+        <thead>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Page Count</th>
+            <th>Is Read</th>
+            <th></th>
+            <th></th>
+        </thead>
+        <tbody>
+
+        </tbody>
     </table> 
     <button class="add-book">Add Book</button>
     <form class="clear">
@@ -24,7 +31,7 @@
         <label for="author">Author</label>
         <input type="text" name="author" id="author" required>
         <label for="pages">Page Count</label>
-        <input type="number" name="pages" id="pages" required>
+        <input type="numeric" name="pages" id="pages" required>
         <input type="radio" name="read" id="Not Read" value="Not Read">
         <input type="radio" name="read" id="Read" value="Read">
         <button class="submit" type="submit">Submit</button>
