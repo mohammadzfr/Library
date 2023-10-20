@@ -70,8 +70,8 @@ function displayLibrary() {
 //inherits from book object and displays book on row
 Book.prototype.displayBook = function() {
   const row = document.createElement('tr');
-  const entryT = document.createElement('td');
-  const entryA = document.createElement('td');
+  const titleEntry = document.createElement('td');
+  const authorEntry = document.createElement('td');
   const entryP = document.createElement('td');
   const entryR = document.createElement('td');
   const entryBtn1 = document.createElement('td');
@@ -80,10 +80,10 @@ Book.prototype.displayBook = function() {
   const btnRmv = document.createElement('button');
   const index = myLibrary.length - 1
   tbody.appendChild(row);
-  entryT.innerHTML = this.title;
-  row.appendChild(entryT);
-  entryA.innerHTML = this.author;
-  row.appendChild(entryA);
+  titleEntry.innerHTML = this.title;
+  row.appendChild(titleEntry);
+  authorEntry.innerHTML = this.author;
+  row.appendChild(authorEntry);
   entryP.innerHTML = this.pageCount;
   row.appendChild(entryP);
   entryR.innerHTML = this.isRead;
@@ -105,14 +105,12 @@ Book.prototype.displayBook = function() {
   btnCallEdit = document.querySelectorAll(".btn-edit");
   console.log(btnCallEdit);
 
-  btnCallEdit.forEach(edit => edit.addEventListener('click', function() {
-    console.log("test");
+  btnCallEdit.forEach(edit => edit.addEventListener('click', () => {
+    console.log("Testing Edit Button");
   }))
-  btnCallRmv.forEach((rmv) => {
-    rmv.addEventListener('click', () => {
-      console.log("test");
-    });
-  });
+  btnCallRmv.forEach(rmv => rmv.addEventListener('click', () => {
+      console.log("Testing Remove Button");
+  }))
 }
 
 function clearLibrary() {
